@@ -38,6 +38,7 @@
 - **EBS PIOPS**: Provisioned IOPS for consistent performance
 - **Multi-part uploads**: Large file handling
 - **S3 Select**: Query data without downloading entire objects
+- **AWS DataSync**: Automated data transfer service for moving large amounts of data between on-premises storage systems and AWS storage services (S3, EFS, FSx). Features include bandwidth throttling, data validation, encryption, and scheduling.
 
 **Best Practices**
 - Use Parquet/ORC for analytics (columnar format → faster queries)
@@ -48,6 +49,7 @@
 **Integration Tools**
 - **AWS Glue**: Serverless ETL, data catalog
 - **Spark on EMR**: Big data processing
+- **AWS DataSync**: Automated data transfer between on-premises and AWS storage
 - **SageMaker Data Wrangler**: Visual data prep
 - **SageMaker Feature Store**: Centralized feature management
 
@@ -69,6 +71,7 @@
 **Tools**
 - **AWS Glue DataBrew**: GUI-based cleaning
 - **SageMaker Data Wrangler**: End-to-end preprocessing pipelines
+- **SageMaker Canvas**: No-code visual interface for data preparation, transformation, and model building without writing code
 - **Athena / SQL / PySpark**: Custom transformations
 
 ### Feature Engineering
@@ -154,7 +157,7 @@
 | Clustering | K-Means, Hierarchical, DBSCAN | SageMaker K-Means |
 | Time Series | ARIMA, Prophet, LSTM, DeepAR | SageMaker DeepAR |
 | Recommendation | Collaborative filtering, Matrix factorization | SageMaker Factorization Machines |
-| NLP | Transformers, BERT, RNNs, BlazingText | SageMaker built-ins, Comprehend |
+| NLP | Transformers, BERT, RNNs, BlazingText | SageMaker built-ins, Comprehend (entity recognition, sentiment analysis, key phrase extraction) |
 | Computer Vision | CNNs, Vision Transformers | SageMaker Image Classification, Rekognition |
 
 ### SageMaker Built-in Algorithms
@@ -225,6 +228,14 @@
 - **Amazon Transcribe**: Speech-to-text
 - **Amazon Rekognition**: Image/video analysis
 - **Amazon Bedrock**: Foundation models, generative AI
+- **Amazon Comprehend**: Natural language processing service that uses machine learning to find insights and relationships in text
+  - **Key features**: Entity recognition, key phrase extraction, sentiment analysis, language detection, topic modeling, PII identification
+  - **Custom classification**: Train custom models for domain-specific text classification
+  - **Custom entity recognition**: Train models to recognize custom entities specific to your domain
+  - **Real-time or batch processing**: Process documents individually or in batches
+  - **Medical NLP**: Specialized version (Comprehend Medical) for healthcare text analysis
+  - **Document analysis**: Extract text, analyze structure, and identify relationships in documents
+- **SageMaker Canvas**: No-code ML model building and deployment with visual interface; supports tabular data, time series forecasting, image classification, and text prediction; includes automated data preparation and model explanation features
 - **Use Custom Models when**: Specialized requirements, proprietary data, performance optimization
 
 **Cost Considerations**
