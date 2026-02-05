@@ -328,12 +328,19 @@
     - 50/50 → balanced
   - Why it matters: Class imbalance can make models look accurate while performing poorly on rare classes
 
- - **Partial Dependence Plots (PDPs)**
+- **Partial Dependence Plots (PDPs)**
   - What it is: A model interpretability technique that shows the average effect of one or more features on a model’s predictions, marginalizing over all other features
   - In plain terms: "If I change this feature, how does the model’s prediction change on average?"
   - Example:
     - Visualizing how predicted house prices change as square footage increases
     - Understanding how loan default risk varies with interest rate
+      
+- **Shapley Values**
+  - What it is: Shapley values to determine the contribution that each feature made to model predictions.
+  - In plain terms: “How much did each feature help or hurt this specific prediction compared to an average baseline?”
+  - Example:
+    - Baseline prediction: 50% chance of default
+    - Income increases prediction to 35% (−15%)
     
 ### Model Training & Optimization
 
