@@ -85,10 +85,121 @@
 - **Log transforms**: Reduce skewness, handle exponential relationships
 
 **Encoding Methods**
-- **One-hot encoding**: Categorical with no order
-- **Label encoding**: Ordinal categories
-- **Binary encoding**: Reduce dimensionality vs one-hot
-- **Tokenization**: Text to numerical representation
+# Encoding Methods (ML Exam Notes)
+
+## 1. One-Hot Encoding
+Use: Nominal categorical (no order)  
+Idea: One binary column per category  
+Example:  
+Color = Red → [1, 0, 0]  
+Issue: High dimensionality  
+
+---
+
+## 2. Label Encoding
+Use: Ordinal categorical  
+Idea: Categories → integers  
+Example:  
+Size = Small, Medium, Large → 1, 2, 3  
+Risk: Wrong for nominal data  
+
+---
+
+## 3. Ordinal Encoding
+Use: Ordered categories (explicit order)  
+Idea: User-defined ranking  
+Example:  
+Education → HS < Bachelor < Master < PhD  
+
+---
+
+## 4. Binary Encoding
+Use: High-cardinality categorical  
+Idea: Integer → binary → columns  
+Example:  
+Category 5 → 101  
+Benefit: Fewer columns than one-hot  
+
+---
+
+## 5. Frequency / Count Encoding
+Use: High-cardinality features  
+Idea: Replace with occurrence count  
+Example:  
+City = Sydney → 5000  
+Risk: Loses category meaning  
+
+---
+
+## 6. Target Encoding (Mean Encoding)
+Use: Supervised learning  
+Idea: Category → mean target value  
+Example:  
+City → average house price  
+Risk: Target leakage  
+
+---
+
+## 7. Hash Encoding (Feature Hashing)
+Use: Very large / streaming data  
+Idea: Hash categories to fixed size  
+Example:  
+Product123 → bucket 42  
+Risk: Collisions  
+
+---
+
+## 8. Tokenization
+Use: Text preprocessing  
+Idea: Split text into tokens  
+Example:  
+"I love ML" → [I, love, ML]  
+Note: Not numerical yet  
+
+---
+
+## 9. Bag of Words (BoW)
+Use: Basic text features  
+Idea: Word counts  
+Example:  
+"ML is fun" → {ML:1, is:1, fun:1}  
+Limitation: Ignores word order  
+
+---
+
+## 10. TF-IDF
+Use: Important word weighting  
+Idea: Rare words get higher weight  
+Example:  
+"the" → low score, "neural" → high  
+Better than: BoW  
+
+---
+
+## 11. Word Embeddings
+Use: Semantic text meaning  
+Idea: Dense vectors  
+Example:  
+king − man + woman ≈ queen  
+Models: Word2Vec, GloVe  
+
+---
+
+## 12. Contextual Embeddings
+Use: Modern NLP  
+Idea: Meaning depends on context  
+Example:  
+"bank" (river vs money)  
+Models: BERT, GPT  
+
+---
+
+## Ultra-Quick Selection Guide
+Nominal → One-Hot  
+Ordinal → Ordinal / Label  
+High-cardinality → Binary / Target / Hash  
+Text → TF-IDF → Embeddings  
+
 
 **Feature Selection & Creation**
 - **Feature selection**: Reduce dimensionality using correlation, mutual info, or PCA
