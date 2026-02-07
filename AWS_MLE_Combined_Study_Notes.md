@@ -86,53 +86,52 @@
 
 **Encoding Methods**
 - **One-Hot Encoding**: Nominal categorical variables (no order)
-    Idea: One binary column per category
-    Example: Color = Red → [1, 0, 0]
-    Issue: High dimensionality
-Label Encoding: Ordinal categorical variables
-Idea: Categories mapped to integers
-Example: Size = Small, Medium, Large → 1, 2, 3
-Risk: Incorrect for nominal data (implies numeric distance)
-Ordinal Encoding: Ordered categories (explicit order)
-Idea: User-defined ranking
-Example: Education → HS < Bachelor < Master < PhD
-Binary Encoding: High-cardinality categorical variables
-Idea: Integer → binary representation → multiple columns
-Example: Category 5 → 101
-Benefit: Fewer columns than one-hot
-Frequency / Count Encoding: High-cardinality features
-Idea: Replace categories with occurrence count
-Example: City = Sydney → 5000
-Risk: Loses category meaning
-Target Encoding (Mean Encoding): Supervised learning
-Idea: Category replaced by mean target value
-Example: City → average house price
-Risk: Target leakage (needs CV/smoothing)
-Hash Encoding (Feature Hashing): Very large or streaming datasets
-Idea: Hash categories into fixed-size buckets
-Example: Product123 → bucket 42
-Risk: Hash collisions
-Tokenization: Text preprocessing (NLP)
-Idea: Split text into tokens
-Example: "I love ML" → [I, love, ML]
-Note: Not numerical yet
-Bag of Words (BoW): Basic text features
-Idea: Word frequency counts
-Example: "ML is fun" → {ML:1, is:1, fun:1}
-Limitation: Ignores word order
-TF-IDF: Text importance weighting
-Idea: Rare words weighted higher than common words
-Example: "the" → low score, "neural" → high
-Better than: BoW
-Word Embeddings: Semantic text representation
-Idea: Dense vectors capturing meaning
-Example: king − man + woman ≈ queen
-Models: Word2Vec, GloVe
-Contextual Embeddings: Modern NLP
-Idea: Word meaning depends on context
-Example: "bank" (river vs money)
-Models: BERT, GPT
-
+  - Idea: One binary column per category
+  - **Example**: Color = Red → [1, 0, 0]
+  - **Issue**: High dimensionality
+- **Label Encoding**: Ordinal categorical variables
+  - **Idea**: Categories mapped to integers
+  - **Example**: Size = Small, Medium, Large → 1, 2, 3
+  - **Risk**: Incorrect for nominal data (implies numeric distance)
+- **Ordinal Encoding**: Ordered categories (explicit order)
+  - **Idea**: User-defined ranking
+  - **Example**: Education → HS < Bachelor < Master < PhD
+- **Binary Encoding**: High-cardinality categorical variables
+  - **Idea**: Integer → binary representation → multiple columns
+  - **Example**: Category 5 → 101
+  - **Benefit**: Fewer columns than one-hot
+- **Frequency / Count Encoding**: High-cardinality features
+  - **Idea**: Replace categories with occurrence count
+  - **Example**: City = Sydney → 5000
+  - **Risk** Loses category meaning
+- **Target Encoding (Mean Encoding)**: Supervised learning
+  - Idea: Category replaced by mean target value
+  - Example: City → average house price
+  - Risk: Target leakage (needs CV/smoothing)
+- **Hash Encoding (Feature Hashing)**: Very large or streaming datasets
+  - **Idea**: Hash categories into fixed-size buckets
+  - **Example**: Product123 → bucket 42
+  - **Risk**: Hash collisions
+- **Tokenization**: Text preprocessing (NLP)
+  - **Idea**: Split text into tokens
+  - **Example**: "I love ML" → [I, love, ML]
+    Note: Not numerical yet
+- **Bag of Words (BoW)**: Basic text features
+  - **Idea**: Word frequency counts
+  - **Example**: "ML is fun" → {ML:1, is:1, fun:1}
+  - **Limitation**: Ignores word order
+- **TF-IDF**: Text importance weighting
+  - **Idea**: Rare words weighted higher than common words
+  - **Example**: "the" → low score, "neural" → high
+  - **Better than**: BoW
+- **Word Embeddings**: Semantic text representation
+  - **Idea**: Dense vectors capturing meaning
+  - **Example**: king − man + woman ≈ queen
+  - **Models**: Word2Vec, GloVe
+- **Contextual Embeddings**: Modern NLP
+  - **Idea**: Word meaning depends on context
+  - **Example**: "bank" (river vs money)
+  - **Models**: BERT, GPT
 
 **Feature Selection & Creation**
 - **Feature selection**: Reduce dimensionality using correlation, mutual info, or PCA
