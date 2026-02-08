@@ -15,11 +15,13 @@
 
 **AWS Data Sources**
 | Source Type | AWS Service | Key Concepts |
-|-------------|------------|--------------|
-| Object Storage | S3 | Data lakes, lifecycle policies |
-| File Systems | EFS, FSx for NetApp ONTAP | Network file system, concurrent access |
-| Streaming | Kinesis Data Streams, Kinesis Firehose, MSK (Managed Kafka) | Real-time ingestion and transformation |
-| Databases | RDS, Aurora, DynamoDB, Redshift | Use JDBC or connectors with SageMaker Data Wrangler |
+|------------|-------------|--------------|
+| **Object Storage** | Amazon S3 | Data lakes, scalable storage, lifecycle policies, primary ML training data source |
+| **File Systems** | Amazon EFS, Amazon FSx for NetApp ONTAP | Shared network file systems, low-latency access, concurrent read/write |
+| **Streaming Data** | Amazon Kinesis Data Streams, Kinesis Data Firehose, Amazon MSK (Managed Kafka) | Real-time ingestion, low-latency processing, streaming ML use cases |
+| **Databases & Warehouses** | Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon Redshift | Structured data, JDBC/ODBC access, Data Wrangler connectors |
+| **Metadata & Catalog** | AWS Glue Data Catalog | Schema discovery, metadata management, dataset discovery |
+| **Data Transformation** | AWS Glue, Glue DataBrew, SageMaker Data Wrangler | ETL, data cleaning, feature engineering |
 
 **Data & Analytics**
 - **S3**: Object storage and data lakes
@@ -138,7 +140,6 @@
   - **Benefit**: Works well for algorithms assuming normal distribution (e.g., Linear Regression, Logistic Regression, Neural Networks)
 - **Risk**: Outliers affect mean/std; does not bound values
 
-
 **Feature Selection & Creation**
 - **Feature selection**: Reduce dimensionality using correlation, mutual info, or PCA
 - **Feature creation**: Combine or decompose features (ratios, polynomial terms, time lags)
@@ -147,6 +148,7 @@
 **Tools**
 - **SageMaker Feature Store**: Store & reuse features
 - **SageMaker Data Wrangler**: 300+ transforms, visual interface
+- **Data Annotation: Amazon** SageMaker Ground Truth for labeling training datasets
 
 **Data Annotation Services**
 - **SageMaker Ground Truth**: Human labeling workflows
@@ -154,6 +156,15 @@
 - **Ground Truth Plus**: Managed labeling teams
 
 ### Data Quality, Bias & Governance
+
+**Data Integrity, Bias & Quality**
+- **Data Bias**: When the training data does not represent the real-world distribution
+- **Types**: Selection bias, label bias, measurement bias
+- **Mitigation**: Resampling, synthetic data, balancing classes
+- **AWS Tools**: SageMaker Clarify, DataBrew
+- **Data Quality**: Detect missing values, schema drift, duplicates
+- **AWS Tools**: Glue DataBrew (validation rules, anomaly detection)
+- **Privacy & Compliance**: Mask PII/PHI, anonymize sensitive fields
 
 **Pre-training Bias Detection**
 - **Class imbalance**: Unequal sample distribution
@@ -293,6 +304,15 @@
 - **Storage costs**: Model artifacts, training data
 - **Spot instances**: Up to 90% savings for fault-tolerant workloads
 
+**Algorithm Selection & Evaluation**
+- **Model Choice**: Based on problem type (regression, classification, ranking, NLP)
+- **Evaluation Metrics**:
+  - Regression: RMSE, MAE, R²
+  - Classification: Accuracy, Precision, Recall, F1, ROC/AUC
+- **Overfitting / Underfitting**:
+  - Bias-variance tradeoff
+  - Cross-validation recommended for generalization
+
 ### Key Formulas & Metrics
 
 **Classification Metrics**
@@ -428,6 +448,10 @@
 - **Random Forest**: Number of trees, max depth, min samples split
 - **SVM**: C parameter, kernel type, gamma
 - **Gradient Boosting**: Learning rate, max depth, number of estimators
+- **SageMaker Automatic Model Tuning (HPO)**:
+  - Search strategies: Random, Bayesian
+  - Tune learning rate, depth, regularization, etc.
+- **Goal**: Improve performance, reduce overfitting, optimize generalization
 
 **Neural Network Tuning**
 - Small batch sizes tend to provide better generalization and avoid local minima
@@ -523,11 +547,12 @@
 - **SageMaker Projects**: Pre-configured MLOps templates
 
 **Orchestration Tools**
-- **SageMaker Pipelines**: Native ML workflows
+- **SageMaker Pipelines**: Automate workflows for training, tuning, evaluation, deployment
 - **Apache Airflow (MWAA)**: Complex DAGs, external integrations
-- **AWS Step Functions**: Serverless workflows, error handling
+- **AWS Step Functions**: Serverless workflows, error handling, Orchestrate multi-step ML workflows
 - **Lambda**: Event-driven, lightweight processing
-
+- **Automation Tools**: Lambda triggers, CodePipeline / CodeBuild / CodeDeploy for ML workflows
+  
 **Pipeline Steps**
 - Data processing → Training → Evaluation → Model registration → Deployment
 
@@ -594,13 +619,13 @@
 ### Model Monitoring
 
 **Drift Detection**
-- **Data drift**: Input feature distribution changes
-- **Model drift**: Model performance degradation
+- **Data drift**: Input feature distribution changes, change in input feature distribution over time
+- **Model drift**: Model performance degradation, change in relationship between features and target
 - **Concept drift**: Target variable relationship changes
 - **Covariate shift**: Feature distribution changes
 
 **Monitoring Tools**
-- **SageMaker Model Monitor**: Built-in drift detection
+- **SageMaker Model Monitor**: Built-in automated drift detection
 - **SageMaker Clarify**: Bias monitoring in production
 - **CloudWatch**: Custom metrics, alarms
 - **Custom solutions**: Statistical tests, KL divergence
