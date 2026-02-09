@@ -67,6 +67,10 @@
   - **Idea**: Visual, no-code/low-code ML preprocessing
   - **Example**: Handle missing values, encode features, export to training job
   - **Exam cue**: Prepare training data, ML workflow, feature engineering
+ 
+**Data Processing Engines**
+- **Apache Spark**: Distributed data processing engine used for large-scale batch and streaming analytics; powers AWS Glue jobs for scalable ETL and data transformation.
+- **Amazon Managed Service for Apache Flink**: Managed stream processing service to run Apache Flink applications for real-time analytics and transformations on streaming data (often reads from Kinesis).
 
 ### Data Cleaning & Transformation
 
