@@ -41,6 +41,7 @@
 - **Multi-part uploads**: Large file handling
 - **S3 Select**: Query data without downloading entire objects
 - **AWS DataSync**: Automated data transfer service for moving large amounts of data between on-premises storage systems and AWS storage services (S3, EFS, FSx). Features include bandwidth throttling, data validation, encryption, and scheduling.
+- **Snowball**: Physical data transfer service used to move very large datasets (TB–PB) into AWS when network transfer is slow, unreliable, or too expensive.
 
 **Best Practices**
 - Use Parquet/ORC for analytics (columnar format → faster queries)
