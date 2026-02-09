@@ -55,6 +55,18 @@
 - **SageMaker Data Wrangler**: Visual data prep
 - **SageMaker Feature Store**: Centralized feature management
 
+**AWS Glue vs SageMaker Data Wrangler**
+- **AWS Glue (Glue Jobs)**: Serverless ETL for large-scale data processing
+  - **Use**: Production data pipelines, batch ETL, data lakes
+  - **Idea**: Transform raw data at scale (Spark-based)
+  - **Example**: Nightly job cleaning logs → structured data in S3
+  - **Exam cue**: ETL, scheduled jobs, data engineering
+- **SageMaker Data Wrangler**: ML-focused data preparation tool
+  - **Use**: Feature engineering before model training
+  - **Idea**: Visual, no-code/low-code ML preprocessing
+  - **Example**: Handle missing values, encode features, export to training job
+  - **Exam cue**: Prepare training data, ML workflow, feature engineering
+
 ### Data Cleaning & Transformation
 
 **Common Transformations**
