@@ -339,12 +339,12 @@
   - Limitations: Can be misleading with imbalanced datasets (e.g., 99% negative cases)
 
 - **Precision** = TP / (TP + FP)
-  - What it means: Of all instances predicted as positive, how many were actually positive
+  - What it means: Of all instances predicted as positive, how many were actually positive -> True Positives + False Positives
   - When to use: When false positives are costly (e.g., spam detection, medical diagnosis)
   - Also called: Positive Predictive Value
 
 - **Recall** = TP / (TP + FN)
-  - What it means: Of all actual positive instances, how many were correctly identified
+  - What it means: Of all actual positive instances, how many were correctly identified -> True Positive Rate
   - When to use: When false negatives are costly (e.g., disease detection, fraud detection)
   - Also called: Sensitivity, True Positive Rate
 
