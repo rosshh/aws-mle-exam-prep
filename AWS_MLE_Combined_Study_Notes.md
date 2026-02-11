@@ -438,7 +438,7 @@
 
 **AWS Training Tools**
 - **SageMaker Training Jobs**: Single or distributed training
-- **SageMaker Experiments**: Track metrics & versions
+- **SageMaker Experiments**: Tracks and organizes ML experiments by recording parameters, datasets, metrics, and results to compare training runs and reproduce models.
 - **Spot Training**: Cost optimization
 - **Managed Frameworks**: TensorFlow, PyTorch, Scikit-learn, MXNet
 
