@@ -108,7 +108,7 @@
   - **One-Hot Encoding**: Nominal categorical variables (no order)
     - **Idea**: One binary column per category
     - **Example**: Color = Red → [1, 0, 0]
-    - **Issue**: High dimensionality
+    - **Issue**: High dimensionality (number of features)
   - **Label Encoding**: Ordinal categorical variables
     - **Idea**: Categories mapped to integers
     - **Example**: Size = Small, Medium, Large → 1, 2, 3
@@ -158,7 +158,7 @@
 - **Risk**: Outliers affect mean/std; does not bound values
 
 **Feature Selection & Creation**
-- **Feature selection**: Reduce dimensionality using correlation, mutual info, or PCA
+- **Feature selection**: Reduce dimensionality (number of features) using correlation, mutual info, or PCA
 - **Feature creation**: Combine or decompose features (ratios, polynomial terms, time lags)
 - **Embedding generation**: Text (Word2Vec/BERT), Categorical (entity embeddings)
 
@@ -256,7 +256,7 @@
 
 **Unsupervised Learning**
 - **K-Means**: Clusters unlabeled data by minimizing within-cluster distance
-- **PCA**: Performs dimensionality reduction via principal component transformation
+- **PCA**: Performs dimensionality (number of features) reduction via principal component transformation
 - **IP Insights**: Detects suspicious entities (e.g., fraudulent IP addresses) using embedding models
 
 **Computer Vision (Specialized)**
