@@ -147,7 +147,7 @@
     - **Models**: Word2Vec, GloVe
 **Scaling & Normalization**:
 - **MinMaxScaler**: Scaling numeric features to a fixed range (usually 0–1)
-  - **Idea**:** Rescales each feature using (x - min) / (max - min)
+  - **Idea**: Rescales each feature using (x - min) / (max - min)
   - **Example**: Age = [18, 25, 50] → [0, 0.35, 1]
   - **Benefit**: Preserves original distribution, simple for bounded features
   - **Risk**: Sensitive to outliers (min/max values can skew scaling)
