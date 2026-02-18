@@ -637,7 +637,7 @@
 
 **Monitoring Tools**
 - **SageMaker Model Monitor**: Built-in automated drift detection
-- **SageMaker Clarify**: Bias monitoring in production
+- **SageMaker Clarify**: Bias monitoring in development (model monitoring in production)
 - **CloudWatch**: Custom metrics, alarms
 - **Custom solutions**: Statistical tests, KL divergence
 
