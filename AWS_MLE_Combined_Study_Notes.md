@@ -306,12 +306,6 @@
 - **Amazon Rekognition**: Image/video analysis
 - **Amazon Bedrock**: Foundation models, generative AI
 - **Amazon Comprehend**: Natural language processing service that uses machine learning to find insights and relationships in text
-  - **Key features**: Entity recognition, key phrase extraction, sentiment analysis, language detection, topic modeling, PII identification
-  - **Custom classification**: Train custom models for domain-specific text classification
-  - **Custom entity recognition**: Train models to recognize custom entities specific to your domain
-  - **Real-time or batch processing**: Process documents individually or in batches
-  - **Medical NLP**: Specialized version (Comprehend Medical) for healthcare text analysis
-  - **Document analysis**: Extract text, analyze structure, and identify relationships in documents
 - **SageMaker Canvas**: No-code ML model building and deployment with visual interface; supports tabular data, time series forecasting, image classification, and text prediction; includes automated data preparation and model explanation features
 - **Use Custom Models when**: Specialized requirements, proprietary data, performance optimization
 
