@@ -205,8 +205,6 @@
 - **Encryption in transit**: TLS, HTTPS
 - **Data classification**: Sensitive, confidential, public
 - **PII/PHI handling**: Anonymization, pseudonymization, masking
-  - **PII**: Personally Identifiable Information (e.g., name, SSN, email)
-  - **PHI**: Protected Health Information (health data covered by HIPAA)
 - **Data residency**: Regional compliance requirements
 
 **Data Quality & Validation**
