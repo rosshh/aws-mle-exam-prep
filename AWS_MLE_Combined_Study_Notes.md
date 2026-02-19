@@ -156,6 +156,11 @@
   - **Example**: Age = [18, 25, 50] → [-1.12, -0.47, 1.59]
   - **Benefit**: Works well for algorithms assuming normal distribution (e.g., Linear Regression, Logistic Regression, Neural Networks)
 - **Risk**: Outliers affect mean/std; does not bound values
+- **RobustScaler**: Standardization resistant to outliers
+  - **Idea**: Rescales features using median and interquartile range (IQR): (x - median) / IQR
+  - **Example**: Age = [18, 25, 50, 100] → uses Q1, Q3 instead of min/max
+  - **Benefit**: More robust to outliers than StandardScaler; preserves information about outliers without distorting the scale
+  - **Risk**: Less intuitive than StandardScaler; not suitable when outliers carry important information
 
 **Feature Selection & Creation**
 - **Feature selection**: Reduce dimensionality (number of features) using correlation, mutual info, or PCA
