@@ -428,7 +428,7 @@
 ### Model Training & Optimization
 
 **Training Process Elements**
-- **Epochs**: Full passes through the dataset; too many cause overfitting, too few cause underfitting.Convergence
+- **Epochs**: Full passes through the dataset; too many cause overfitting, too few cause underfitting.
 - **Batch size**: How many samples the model sees before updating; smaller is "smarter" but slower, larger is faster but can miss details.
 - **Learning rate**: Step size for gradient descent, The "step size" for learning; too high overshoots, too low never converges.
 - **Early stopping**: Prevent overfitting, save time
@@ -470,10 +470,10 @@
 - **Goal**: Improve performance, reduce overfitting, optimize generalization
 
 **Neural Network Tuning**
-**Convergence**: The "finish line" where the model has reached its minimum error and stopped improving.
-**Generalising**: The model’s ability to correctly predict new, unseen data rather than just memorising the old.
-**Overshooting**: When a high learning rate causes the model to jump over the optimal solution, leading to erratic error rates.
-**Overfitting**: When the model "memorises" training data noise, causing high training accuracy but poor validation accuracy.
+- **Convergence**: The "finish line" where the model has reached its minimum error and stopped improving.
+- **Generalising**: The model’s ability to correctly predict new, unseen data rather than just memorising the old.
+- **Overshooting**: When a high learning rate causes the model to jump over the optimal solution, leading to erratic error rates.
+- **Overfitting**: When the model "memorises" training data noise, causing high training accuracy but poor validation accuracy.
 
 - Small batch sizes tend to provide better generalization and avoid local minima
 - Large batch sizes can converge faster but may settle on suboptimal solutions
