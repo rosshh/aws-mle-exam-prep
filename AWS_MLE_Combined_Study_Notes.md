@@ -69,8 +69,8 @@
   - **Exam cue**: Prepare training data, ML workflow, feature engineering
  
 **Data Processing Engines**
-- **Apache Spark**: Distributed data processing engine used for large-scale batch and streaming analytics; powers AWS Glue jobs for scalable ETL and data transformation.
-- **Amazon Managed Service for Apache Flink**: Managed stream processing service to run Apache Flink applications for real-time analytics and transformations on streaming data (often reads from Kinesis).
+- **Apache Spark**: Distributed data processing engine used for large-scale batch and streaming analytics; powers AWS Glue jobs for scalable ETL and data transformation. Batch-orientated
+- **Amazon Managed Service for Apache Flink**: Managed stream processing service to run Apache Flink applications for real-time analytics and transformations on streaming data (often reads from Kinesis). Strict latency requirements, complex event processing
 
 ### Data Cleaning & Transformation
 
