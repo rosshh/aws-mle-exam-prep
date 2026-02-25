@@ -705,7 +705,8 @@
 
 **Network Security**
 - **VPC isolation**: Private subnets, security groups
-- **NACLs**: Subnet-level access control
+- **Security Groups**: Allow rules only (implicitly denies everything else), Denies all inbound; allows all outbound
+- **NACLs**: Subnet-level access control, Best for broad "blacklisting", Allow and Deny rules
 - **VPC endpoints**: Private service connectivity
 - **WAF**: Web application firewall protection
 
