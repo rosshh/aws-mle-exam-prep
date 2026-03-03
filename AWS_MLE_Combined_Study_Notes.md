@@ -459,6 +459,11 @@
 - **Warm Start**: Use this to start a new tuning job using the results from a previous one to save time and money.
 - **SageMaker Automatic Model Tuning**: Managed HPO service
 
+**LLM Decoding Parameters: Fine-Tuning Model Creativity and Precision**
+- **Temperature**: Controls randomness by scaling probabilities (e.g., at 0.1 it defines "Sky" as "Blue," while at 1.0 it might suggest "Sky" is "Crimson" or "Electric").
+- **Top-K**: Limits the selection to a fixed number of the most likely next words (e.g., if K=3, and the model predicts "The cat sat on the...", it can only choose between "mat," "chair," or "floor").
+- **Top-P**: Limits the selection to a dynamic pool of words that together reach a probability threshold (e.g., if P=0.9, and "Coffee" and "Tea" already cover 90% of the probability, the model ignores all other drinks).
+
 **Key Hyperparameters by Algorithm**
 - **Neural Networks**: Learning rate, hidden layers, dropout rate
 - **Random Forest**: Number of trees, max depth, min samples split
